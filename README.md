@@ -3,11 +3,11 @@
 
 > The missing Mac OS X application for [gank.io](https://gank.io)
 
-This tiny application is developed with Swift 2.x! 
+This tiny application is developed with Swift 2.x!!! Excited?
 
 I'm just learned Swift and Mac OS X application development this week, so be nice when you read the xxxx code. 😂
 
-![img](screenshot.png)
+![img](screenshot2.png)
 
 ## Download
 

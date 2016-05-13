@@ -11,6 +11,7 @@
 		C83D57C11CE6259000762FF1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C83D57C01CE6259000762FF1 /* README.md */; };
 		C83D57C71CE62E1B00762FF1 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = C83D57C61CE62E1A00762FF1 /* screenshot.png */; };
 		C83D57C91CE62E2300762FF1 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C83D57C81CE62E2300762FF1 /* LICENSE.txt */; };
+		C83D57CB1CE6300400762FF1 /* screenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = C83D57CA1CE6300400762FF1 /* screenshot2.png */; };
 		C87D6BA31CE4731B00AA31B6 /* GankItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87D6BA21CE4731B00AA31B6 /* GankItem.swift */; };
 		C87D6BB61CE486F800AA31B6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87D6BB31CE486F800AA31B6 /* Alamofire.framework */; };
 		C87D6BB81CE486F800AA31B6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87D6BB51CE486F800AA31B6 /* SwiftyJSON.framework */; };
@@ -41,6 +42,7 @@
 		C83D57C01CE6259000762FF1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C83D57C61CE62E1A00762FF1 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screenshot.png; path = ../screenshot.png; sourceTree = "<group>"; };
 		C83D57C81CE62E2300762FF1 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
+		C83D57CA1CE6300400762FF1 /* screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screenshot2.png; path = ../screenshot2.png; sourceTree = "<group>"; };
 		C87D6BA21CE4731B00AA31B6 /* GankItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankItem.swift; sourceTree = "<group>"; };
 		C87D6BB31CE486F800AA31B6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/Gank-agokjyfuexvnqfhesiiklyguildc/Build/Products/Debug/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		C87D6BB51CE486F800AA31B6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/Gank-agokjyfuexvnqfhesiiklyguildc/Build/Products/Debug/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		C87D6BA11CE472DC00AA31B6 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				C83D57CA1CE6300400762FF1 /* screenshot2.png */,
 				C83D57C81CE62E2300762FF1 /* LICENSE.txt */,
 				C83D57C61CE62E1A00762FF1 /* screenshot.png */,
 				C83D57C01CE6259000762FF1 /* README.md */,
@@ -248,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83D57CB1CE6300400762FF1 /* screenshot2.png in Resources */,
 				C887EF7E1CE37ADD0065DA55 /* Assets.xcassets in Resources */,
 				C8EB09A81CE58BAB00861B77 /* GankViewController.xib in Resources */,
 				C887EF901CE3831E0065DA55 /* MainMenu.xib in Resources */,
