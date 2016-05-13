@@ -5,9 +5,11 @@
 
 This tiny application is developed with Swift 2.x!!! Excited?
 
+![img](screenshot2.png)
+
 I'm just learned Swift and Mac OS X application development this week, so be nice when you read the xxxx code. 😂
 
-![img](screenshot2.png)
+![img](screenshot3.png)
 
 ## Download
 
