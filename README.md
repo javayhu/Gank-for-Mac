@@ -1,38 +1,51 @@
 
-# Gank for Mac
+# Gank for Mac 
 
-> The missing Mac OS X application for [gank.io](https://gank.io)
+> The missing Mac OS X application for [gank.io](https://gank.io). 
 
-## Application Features
+Gank for Mac是一个小巧的干货集中营Mac端应用，它只在你的状态栏占据一点点空间而已。 
 
-This tiny application is used to view the `gank` posts in [gank.io](https://gank.io), and send you a notification when new post arrived. Nothing more and nothing less.   
-It is developed with [Swift](https://swift.org/) 2.2!!! Excited? 😜   
-Btw, please make sure your mac system is OS X 10.10 or later.
+[应用下载地址](https://github.com/hujiaweibujidao/Gank/releases)  [README in English](README-EN.md)
+
+## 应用功能
+
+Gank for Mac的功能包括查看[干货集中营](https://gank.io)今天或者以前的干货数据，同时在应用启动的情况下，当有新的干货到来的时候会推送通知给你喂食哟，麻麻为了不让你饿着真是操碎了心。当然，你再也不用担心抢不到评论区的沙发啦！😚
+
+Gank for Mac使用的是 [Swift](https://swift.org/) 语言开发的，Mac系统版本要求10.10及以上，应用截图如下：
 
 ![img](screenshot2.png)
 
-Almost all the code is explained with its fuctions, so enjoy reading the source code. 😄   
-Since I just learned Swift language and Mac OS X application development this week, please be nice when you read the xxxx code. 😂 Btw, other helpful features are still under development. 😘     
-Feel free to submit any pull request to make it better or send your suggestions to [me](mailto:hujiawei090807@gmail.com).
+由于我是刚学Swift，而且还是第一次写Mac OS X应用，所以项目源码基本上都注释得很清楚，但是不保证代码写得非常好，所以哪块代码要是没写好请轻拍哈。当然，欢迎提交PR或者提建议。😘
 
 ![img](screenshot3.png)
 
-## Get this Application
+## 数据+依赖+资源
 
-You can rebuild this project to get this applicaton or you can download Gank for Mac [here](https://github.com/hujiaweibujidao/Gank/releases)
-
-## Data and Libraries
-
-1.[gank.io](http://gank.io/) and its [API](http://gank.io/api): Share technical `ganks` every day  
+1.[gank.io](http://gank.io/) and its [API](http://gank.io/api): 每日分享妹子图和技术干货  
 2.[Alamofire](https://github.com/Alamofire/Alamofire): Elegant HTTP Networking in Swift  
 3.[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON): The better way to deal with JSON data in Swift  
 4.[SwiftyTimer](https://github.com/radex/SwiftyTimer): Swifty API for NSTimer  
-5.Image resources are coming from [IconFinder](https://www.iconfinder.com/), mainly from [this iconset](https://www.iconfinder.com/iconsets/picons-social) with the license of free for commercial use.
+5.图片来源于[IconFinder](https://www.iconfinder.com/)，主要是[这个图标集合](https://www.iconfinder.com/iconsets/picons-social)
 
-## Projects Based on
+## 参考项目
 
 1.[Product Hunt](https://github.com/producthunt/producthunt-osx)  
 2.[Toutiao for Mac](https://github.com/judi0713/TouTiao)
+
+### FAQ
+
+#### 1.妹子图在哪里呢？
+
+我就知道你只关心妹子！！！🙈   
+为了应用的简洁(实际是我写不出来😂)，点击妹子图或者休息视频会进入那天的干货日报界面。
+
+#### 2.后台自动刷新的时间间隔设置的是多久？
+
+默认是10分钟，如果你觉得不合适可以自己改改源码重新生成一个应用哈。
+
+#### 3.为啥没有开机自启动？
+
+应用的开机自启动可以在`System Preferences`中设置的嘛，别以为我不知道！😌
 
 ## The License
 

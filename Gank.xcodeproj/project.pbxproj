@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A0A1EB5BEA0EA66DDCFC3B7C /* Pods_Gank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71DE5E34C80D7F11D29D874 /* Pods_Gank.framework */; };
+		C819FF661CE71E70004D569E /* README-EN.md in Sources */ = {isa = PBXBuildFile; fileRef = C819FF651CE71E70004D569E /* README-EN.md */; };
 		C83D57C71CE62E1B00762FF1 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = C83D57C61CE62E1A00762FF1 /* screenshot.png */; };
 		C83D57C91CE62E2300762FF1 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C83D57C81CE62E2300762FF1 /* LICENSE.txt */; };
 		C83D57CB1CE6300400762FF1 /* screenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = C83D57CA1CE6300400762FF1 /* screenshot2.png */; };
@@ -41,6 +42,7 @@
 		4F9AAFD7867AD56F0F15DDA2 /* Pods-Gank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gank/Pods-Gank.debug.xcconfig"; sourceTree = "<group>"; };
 		794D55073DB106AE6F7076E8 /* Pods-Gank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gank.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gank/Pods-Gank.release.xcconfig"; sourceTree = "<group>"; };
 		B71DE5E34C80D7F11D29D874 /* Pods_Gank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C819FF651CE71E70004D569E /* README-EN.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "README-EN.md"; path = "../README-EN.md"; sourceTree = "<group>"; };
 		C83D57C01CE6259000762FF1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C83D57C61CE62E1A00762FF1 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screenshot.png; path = ../screenshot.png; sourceTree = "<group>"; };
 		C83D57C81CE62E2300762FF1 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				C83D57CA1CE6300400762FF1 /* screenshot2.png */,
 				C83D57C81CE62E2300762FF1 /* LICENSE.txt */,
 				C83D57C61CE62E1A00762FF1 /* screenshot.png */,
+				C819FF651CE71E70004D569E /* README-EN.md */,
 				C83D57C01CE6259000762FF1 /* README.md */,
 				C887EF7D1CE37ADD0065DA55 /* Assets.xcassets */,
 				C887EF8F1CE3831E0065DA55 /* MainMenu.xib */,
@@ -339,6 +342,7 @@
 				C8C636BE1CE5EDC300801E00 /* GankSection.swift in Sources */,
 				C887EF8A1CE37FF10065DA55 /* EventMonitor.swift in Sources */,
 				C87D6BA31CE4731B00AA31B6 /* GankItem.swift in Sources */,
+				C819FF661CE71E70004D569E /* README-EN.md in Sources */,
 				C887EF921CE384DB0065DA55 /* GankAPI.swift in Sources */,
 				C8EB099A1CE58A6A00861B77 /* GankSectionCell.swift in Sources */,
 				C8EB09991CE58A6A00861B77 /* GankScrollView.swift in Sources */,
