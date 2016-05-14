@@ -8,8 +8,10 @@ It is developed with [Swift](https://swift.org/) 2.2!!! Excited? 😜
 Btw, please make sure your mac system is OS X 10.10 or later.
 
 ![img](screenshot2.png)
-
-I just learned Swift and Mac OS X application development this week, so please be nice when you read the xxxx code. 😂 I have tried my best to document and explain almost all the code. 😄
+   
+Almost all the code is explained with its fuctions, so enjoy reading the source code. 😄   
+Since I just learned Swift and Mac OS X application development this week, please be nice when you read the xxxx code. 😂   
+Feel free to submit any pull request to make it better or give your suggestions to [me](mailto:hujiawei090807@gmail.com).
 
 ![img](screenshot3.png)
 
@@ -29,7 +31,7 @@ You can rebuild this project to get this applicaton or you can download Gank for
 1.[Product Hunt](https://github.com/producthunt/producthunt-osx)  
 2.[Toutiao for Mac](https://github.com/judi0713/TouTiao)
 
-## License
+## The License
 
 ```
 The MIT License (MIT)
