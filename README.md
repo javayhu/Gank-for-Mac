@@ -3,28 +3,31 @@
 
 > The missing Mac OS X application for [gank.io](https://gank.io)
 
-This tiny application is used to receive the gank posts in [gank.io](https://gank.io) and developed with Swift 2.x!!! But, please make sure your mac system is above OS X 10.10.
+This tiny application is used to receive the `gank` posts in [gank.io](https://gank.io), no more and no less.   
+It is developed with [Swift](https://swift.org/) 2.2!!! Excited? 😜   
+Btw, please make sure your mac system is OS X 10.10 or later.
 
 ![img](screenshot2.png)
 
-I just learned Swift and Mac OS X application development this week, so please be nice when you read the xxxx code. 😂 I have tried my best to document and explain almost all the code.
+I just learned Swift and Mac OS X application development this week, so please be nice when you read the xxxx code. 😂 I have tried my best to document and explain almost all the code. 😄
 
 ![img](screenshot3.png)
 
-## Get Application
+## Get this Application
 
 You can rebuild this project to get this applicaton or you can download Gank for Mac [here](https://github.com/hujiaweibujidao/Gank/releases)
 
-## Data API
+## Data and Libraries
 
-[gank.io](http://gank.io/) and its [API](http://gank.io/api)
+1.[gank.io](http://gank.io/) and its [API](http://gank.io/api): Share technical `ganks` every day  
+2.[Alamofire](https://github.com/Alamofire/Alamofire): Elegant HTTP Networking in Swift  
+3.[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON): The better way to deal with JSON data in Swift  
+4.Image resources are coming from [IconFinder](https://www.iconfinder.com/), mainly from [this iconset](https://www.iconfinder.com/iconsets/picons-social) with the license of free for commercial use.
 
-## Projects Inspired
+## Projects Inspired by
 
 1.[Product Hunt](https://github.com/producthunt/producthunt-osx)  
 2.[Toutiao for Mac](https://github.com/judi0713/TouTiao)
-
-Images are coming from [here](https://www.iconfinder.com/iconsets/picons-social), free for commercial use.
 
 ## License
 
