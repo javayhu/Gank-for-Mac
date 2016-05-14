@@ -7,9 +7,10 @@
 //
 
 import Cocoa
+import SwiftyTimer
 
 //主界面窗口
-class GankViewController: NSViewController {
+class GankViewController: NSViewController, NSUserNotificationCenterDelegate {
 
 	@IBOutlet weak var tableView: NSTableView! // 表格组件
 	@IBOutlet weak var loadingView: GankLoadingView! // 加载界面
@@ -34,51 +35,86 @@ class GankViewController: NSViewController {
 		lastUpdatedLabel.stringValue = "" // 初始时为空字符串
 		loadingView.showState(.Loading) // 进入之后首先显示加载界面
 
-		// 注册监听，原本是放在viewWillAppear中的，但是这样容易导致每次进入都会reload，此外这个监听并不取消，应用关闭自然取消
+		// 关于发送系统通知
+		NSUserNotificationCenter.defaultUserNotificationCenter().delegate = self
+
+		// 注册监听，前者是用于加载某日的数据，后者是用于加载日期列表
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadData), name: "Reload", object: nil)
-		// 发送加载数据的请求
-		NSNotificationCenter.defaultCenter().postNotificationName("Reload", object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadSections), name: "ReloadSections", object: nil)
+
+		NSNotificationCenter.defaultCenter().postNotificationName("Reload", object: nil) // 发送加载数据的请求
 	}
 
-	// 重新加载数据
-	func reloadData() {
-		if self.sections.count > 0 { // 不为空就加载第一个section对应的数据
-			self.gankAPI.loadDateGanks(sections[currentDate]) {
-				[unowned self] data in
+	// 加载日期列表
+	func reloadSections() {
+		gankAPI.loadAllDates {
+			[unowned self] data in
 
-				if data is NSError {
-					self.loadingView.showState(.Error)
-				} else {
-					let itemList = data as! [GankItem]
-					print("Reloaded Data Ganks \(self.sections[self.currentDate].date!)")
-					self.items.append(self.sections[self.currentDate].date!)
-					itemList.forEach { self.items.append($0) }
-					self.tableView.reloadData()
-					self.updateUI()
-					self.loadingView.showState(self.items.count > 0 ? .Idle : .Empty)
-					self.currentDate += 1
-				}
+			if data is NSError {
+				return self.loadingView.showState(.Error)
 			}
-		} else { // sections为空就先加载sections
-			gankAPI.loadAllDates {
-				[unowned self] data in
 
-				if data is NSError {
-					self.loadingView.showState(.Error)
-				} else {
-					self.sections = data as! [GankSection]
-					if self.sections.isEmpty { // 如果sections是空那就是没有数据，当然这不可能发生，这是为了避免循环
-						self.loadingView.showState(.Empty)
-					} else { // 再次发送数据加载请求
-						NSNotificationCenter.defaultCenter().postNotificationName("Reload", object: nil)
-					}
-				}
+			let sectionList = data as! [GankSection]
+			if sectionList.isEmpty { // 如果sections是空那就是没有数据，当然这不太可能发生，这里是为了避免请求的死循环
+				self.loadingView.showState(.Empty) // 这里可以不用考虑之前的sections是什么
+			} else { // 如果sectionList不为空，那么就表示sections中有数据
+				if self.sections.count == 0 { // sections之前为空，设置为加载到的数据列表，并重新请求加载数据（加载日期列表中第一个日期的数据）
+					self.sections = sectionList
+					// self.sections.removeFirst() // 测试使用
+					NSNotificationCenter.defaultCenter().postNotificationName("Reload", object: nil)
+				} else if self.sections.count > 0 && self.sections.count < sectionList.count { // sections之前不为空，但是却有最新的数据来了
+					self.sections = sectionList
+					self.currentDate = 0
+					self.items = [] // 为了简便，最新的数据来了就清空原来的列表数据，加载当前最新的数据，此时不用更新界面，等数据加载到了自然更新
+					NSNotificationCenter.defaultCenter().postNotificationName("Reload", object: nil)
+					self.sendNotification()
+				} // 另一种情况是两次请求的数据没有变化，那么就不做任何处理
 			}
 		}
 	}
 
+	// 加载某日的数据，每次数据加载的请求发送之后这个方法就会被触发
+	func reloadData() {
+		if self.sections.count > 0 { // 如果日期列表不为空就加载当前已经加载到的日期对应的数据
+			gankAPI.loadDateGanks(sections[currentDate]) {
+				[unowned self] data in
+
+				if data is NSError {
+					return self.loadingView.showState(.Error)
+				}
+
+				let itemList = data as! [GankItem]
+				print("Reloaded Data Ganks \(self.sections[self.currentDate].date!)")
+				self.items.append(self.sections[self.currentDate].date!)
+				itemList.forEach { self.items.append($0) }
+				self.updateUI()
+				self.loadingView.showState(self.items.count > 0 ? .Idle : .Empty)
+				self.currentDate += 1
+			}
+		} else { // 如果日期列表为空就先加载日期列表sections
+			reloadSections()
+		}
+	}
+
+	// NSUserNotificationCenterDelegate
+	// http://stackoverflow.com/questions/11814903/send-notification-to-mountain-lion-notification-center
+	func userNotificationCenter(center: NSUserNotificationCenter, shouldPresentNotification notification: NSUserNotification) -> Bool {
+		return true
+	}
+
+	// 发送系统通知
+	func sendNotification() {
+		let notification = NSUserNotification()
+		notification.title = "干货集中营"
+		notification.informativeText = "客官，有新的干货啦，快点趁热吃了吧!"
+		// notification.contentImage = NSImage(named: "AppIcon") // 并非用来设置通知的logo
+		notification.soundName = NSUserNotificationDefaultSoundName
+		NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(notification)
+	}
+
 	// 刷新界面
 	func updateUI() {
+		tableView.reloadData()
 		lastUpdatedLabel.stringValue = "更新时间: \(format.stringFromDate(NSDate()))"
 	}
 
@@ -128,7 +164,7 @@ extension GankViewController: NSTableViewDelegate {
 			return true
 		}
 		if let item = items[row] as? GankItem {
-			OpenUrlAction.perform(withPath: item.url)
+			OpenUrlAction.perform(withPath: item.visitUrl)
 		}
 		return true
 	}

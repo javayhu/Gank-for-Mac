@@ -13,10 +13,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	// @IBOutlet weak var window: NSWindow! //没有window了，整个应用只有状态栏中的那个弹出窗口
 
-	// 状态栏的应用按钮 NSVariableStatusItemLength 或者 -2
-	let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
-	// 点击状态栏应用按钮弹出的主界面窗口
-	let popover = NSPopover()
+	let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength) // 状态栏的应用按钮，或者用 -2
+	let popover = NSPopover() // 点击状态栏应用按钮弹出的主界面窗口
+	var refreshTimer: NSTimer? // 定时器用于刷新数据
 
 	// 应用启动之后
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -31,9 +30,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		popover.behavior = .Transient
 		popover.animates = false
 		popover.appearance = NSAppearance(named: NSAppearanceNameAqua) // since os x 10.9
+
+		// 设置定时器每隔10分钟发送数据请求 10.minutes
+		refreshTimer = NSTimer.every(10.minutes) { // seconds
+			NSNotificationCenter.defaultCenter().postNotificationName("ReloadSections", object: nil)
+		}
 	}
 
 	func applicationWillTerminate(aNotification: NSNotification) {
+		refreshTimer?.invalidate() // 关闭定时器
+		refreshTimer = nil
+		if let controller = popover.contentViewController { // 取消监听
+			NSNotificationCenter.defaultCenter().removeObserver(controller)
+		}
 	}
 
 	// 打开或者关闭弹出窗口

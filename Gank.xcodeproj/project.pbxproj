@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A0A1EB5BEA0EA66DDCFC3B7C /* Pods_Gank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71DE5E34C80D7F11D29D874 /* Pods_Gank.framework */; };
-		C83D57C11CE6259000762FF1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C83D57C01CE6259000762FF1 /* README.md */; };
 		C83D57C71CE62E1B00762FF1 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = C83D57C61CE62E1A00762FF1 /* screenshot.png */; };
 		C83D57C91CE62E2300762FF1 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C83D57C81CE62E2300762FF1 /* LICENSE.txt */; };
 		C83D57CB1CE6300400762FF1 /* screenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = C83D57CA1CE6300400762FF1 /* screenshot2.png */; };
 		C83D57EB1CE633F000762FF1 /* screenshot3.png in Resources */ = {isa = PBXBuildFile; fileRef = C83D57EA1CE633F000762FF1 /* screenshot3.png */; };
+		C84B06BF1CE6F86300EA2FC7 /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84B06BE1CE6F86300EA2FC7 /* SwiftyTimer.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		C87D6BA31CE4731B00AA31B6 /* GankItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87D6BA21CE4731B00AA31B6 /* GankItem.swift */; };
 		C87D6BB61CE486F800AA31B6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87D6BB31CE486F800AA31B6 /* Alamofire.framework */; };
 		C87D6BB81CE486F800AA31B6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87D6BB51CE486F800AA31B6 /* SwiftyJSON.framework */; };
@@ -22,6 +22,7 @@
 		C887EF901CE3831E0065DA55 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C887EF8F1CE3831E0065DA55 /* MainMenu.xib */; };
 		C887EF921CE384DB0065DA55 /* GankAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C887EF911CE384DB0065DA55 /* GankAPI.swift */; };
 		C89D55581CE59F510063763F /* SettingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89D55571CE59F510063763F /* SettingAction.swift */; };
+		C8A1DB501CE714DA00EE8CD6 /* NSUserNotification+Gank.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A1DB4F1CE714DA00EE8CD6 /* NSUserNotification+Gank.swift */; };
 		C8C636BE1CE5EDC300801E00 /* GankSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C636BD1CE5EDC300801E00 /* GankSection.swift */; };
 		C8EB09721CE4D54100861B77 /* PopoverAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EB09711CE4D54100861B77 /* PopoverAction.swift */; };
 		C8EB098E1CE57A7C00861B77 /* OpenUrlAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EB098D1CE57A7C00861B77 /* OpenUrlAction.swift */; };
@@ -45,6 +46,7 @@
 		C83D57C81CE62E2300762FF1 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
 		C83D57CA1CE6300400762FF1 /* screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screenshot2.png; path = ../screenshot2.png; sourceTree = "<group>"; };
 		C83D57EA1CE633F000762FF1 /* screenshot3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screenshot3.png; path = ../screenshot3.png; sourceTree = "<group>"; };
+		C84B06BE1CE6F86300EA2FC7 /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = "../../Library/Developer/Xcode/DerivedData/Gank-agokjyfuexvnqfhesiiklyguildc/Build/Products/Debug/SwiftyTimer/SwiftyTimer.framework"; sourceTree = "<group>"; };
 		C87D6BA21CE4731B00AA31B6 /* GankItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankItem.swift; sourceTree = "<group>"; };
 		C87D6BB31CE486F800AA31B6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/Gank-agokjyfuexvnqfhesiiklyguildc/Build/Products/Debug/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		C87D6BB51CE486F800AA31B6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/Gank-agokjyfuexvnqfhesiiklyguildc/Build/Products/Debug/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		C887EF8F1CE3831E0065DA55 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		C887EF911CE384DB0065DA55 /* GankAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankAPI.swift; sourceTree = "<group>"; };
 		C89D55571CE59F510063763F /* SettingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAction.swift; sourceTree = "<group>"; };
+		C8A1DB4F1CE714DA00EE8CD6 /* NSUserNotification+Gank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserNotification+Gank.swift"; sourceTree = "<group>"; };
 		C8C636BD1CE5EDC300801E00 /* GankSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankSection.swift; sourceTree = "<group>"; };
 		C8EB09711CE4D54100861B77 /* PopoverAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAction.swift; sourceTree = "<group>"; };
 		C8EB098D1CE57A7C00861B77 /* OpenUrlAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenUrlAction.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84B06BF1CE6F86300EA2FC7 /* SwiftyTimer.framework in Frameworks */,
 				C87D6BB61CE486F800AA31B6 /* Alamofire.framework in Frameworks */,
 				C87D6BB81CE486F800AA31B6 /* SwiftyJSON.framework in Frameworks */,
 				A0A1EB5BEA0EA66DDCFC3B7C /* Pods_Gank.framework in Frameworks */,
@@ -87,6 +91,7 @@
 		106B207C3B987E904DE24CF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C84B06BE1CE6F86300EA2FC7 /* SwiftyTimer.framework */,
 				C87D6BB31CE486F800AA31B6 /* Alamofire.framework */,
 				C87D6BB51CE486F800AA31B6 /* SwiftyJSON.framework */,
 				B71DE5E34C80D7F11D29D874 /* Pods_Gank.framework */,
@@ -146,6 +151,7 @@
 				106B207C3B987E904DE24CF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		C887EF791CE37ADD0065DA55 /* Products */ = {
 			isa = PBXGroup;
@@ -189,6 +195,7 @@
 				C8EB09931CE58A6A00861B77 /* GankScrollView.swift */,
 				C8EB09941CE58A6A00861B77 /* GankSectionCell.swift */,
 				C8EB09951CE58A6A00861B77 /* GankSeenView.swift */,
+				C8A1DB4F1CE714DA00EE8CD6 /* NSUserNotification+Gank.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -327,10 +334,10 @@
 				C89D55581CE59F510063763F /* SettingAction.swift in Sources */,
 				C8EB09A71CE58BAB00861B77 /* GankViewController.swift in Sources */,
 				C8EB09721CE4D54100861B77 /* PopoverAction.swift in Sources */,
+				C8A1DB501CE714DA00EE8CD6 /* NSUserNotification+Gank.swift in Sources */,
 				C8EB09981CE58A6A00861B77 /* GankItemCell.swift in Sources */,
 				C8C636BE1CE5EDC300801E00 /* GankSection.swift in Sources */,
 				C887EF8A1CE37FF10065DA55 /* EventMonitor.swift in Sources */,
-				C83D57C11CE6259000762FF1 /* README.md in Sources */,
 				C87D6BA31CE4731B00AA31B6 /* GankItem.swift in Sources */,
 				C887EF921CE384DB0065DA55 /* GankAPI.swift in Sources */,
 				C8EB099A1CE58A6A00861B77 /* GankSectionCell.swift in Sources */,
