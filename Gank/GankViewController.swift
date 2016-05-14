@@ -30,7 +30,7 @@ class GankViewController: NSViewController {
 		view.layer?.backgroundColor = NSColor.gankWhiteColor().CGColor
 
 		format.dateFormat = "yyyy-MM-dd HH:mm:ss" // 更新时间的显示格式
-		tableView.intercellSpacing = NSSize.zero // 列表单元格间隔为0
+		// tableView.intercellSpacing = NSSize.zero // 列表单元格间隔为0
 		lastUpdatedLabel.stringValue = "" // 初始时为空字符串
 		loadingView.showState(.Loading) // 进入之后首先显示加载界面
 

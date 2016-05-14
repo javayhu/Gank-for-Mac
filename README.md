@@ -10,8 +10,8 @@ Btw, please make sure your mac system is OS X 10.10 or later.
 ![img](screenshot2.png)
    
 Almost all the code is explained with its fuctions, so enjoy reading the source code. 😄   
-Since I just learned Swift and Mac OS X application development this week, please be nice when you read the xxxx code. 😂   
-Feel free to submit any pull request to make it better or give your suggestions to [me](mailto:hujiawei090807@gmail.com).
+Since I just learned Swift language and Mac OS X application development this week, please be nice when you read the xxxx code. 😂 Btw, other helpful features are still under development. 😘     
+Feel free to submit any pull request to make it better or send your suggestions to [me](mailto:hujiawei090807@gmail.com).
 
 ![img](screenshot3.png)
 
