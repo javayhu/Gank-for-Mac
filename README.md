@@ -1,12 +1,12 @@
 [README in English](README-EN.md)
 
-# Gank for Mac 
+# Gank for Mac
 
-> The missing Mac OS X application for [gank.io](https://gank.io). 
+> The missing Mac OS X application for [gank.io](https://gank.io).
 
-Gank for Mac是一个小巧的干货集中营Mac端应用，它只在你的状态栏占据一点点空间而已。 
+Gank for Mac是一个小巧的干货集中营Mac端应用，它只在你的状态栏占据一点点空间而已。
 
-[应用下载地址](https://github.com/hujiaweibujidao/Gank/releases) 
+[应用下载地址](https://github.com/hujiaweibujidao/Gank/releases)
 
 ## 应用功能
 
@@ -49,6 +49,8 @@ Gank for Mac使用的是 [Swift](https://swift.org/) 语言开发的，Mac系统
 #### 3.为啥没有开机自启动？
 
 应用的开机自启动可以在`System Preferences`中设置的嘛，别以为我不知道！😌
+
+![img](autologin.png)
 
 ## The License
 
