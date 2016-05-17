@@ -8,6 +8,8 @@ Gank for Mac是一个小巧的干货集中营Mac端应用，它只在你的状�
 
 [应用下载地址](https://github.com/hujiaweibujidao/Gank/releases)
 
+如果你对我的开发工作感兴趣的话记得在Github上Follow我哟，或者关注[我的博客](http://hujiaweibujidao.github.io/)。
+
 ## 应用功能
 
 Gank for Mac的功能包括查看[干货集中营](https://gank.io)今天或者以前的干货数据，同时在应用启动的情况下，当有新的干货到来的时候会推送通知给你喂食哟，麻麻为了不让你饿着真是操碎了心。当然，你再也不用担心抢不到评论区的沙发啦！😚   
