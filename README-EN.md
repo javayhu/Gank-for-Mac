@@ -1,5 +1,6 @@
+[中文说明](README.md) [![Github All Releases](https://img.shields.io/github/downloads/hujiaweibujidao/Gank-for-Mac/total.svg)](https://github.com/hujiaweibujidao/Gank-for-Mac/releases)  
 
-# Gank for Mac
+# Gank for Mac 
 
 > The missing Mac OS X application for [gank.io](https://gank.io)
 

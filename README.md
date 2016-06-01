@@ -1,4 +1,4 @@
-[README in English](README-EN.md)
+[README in English](README-EN.md)  [![Github All Releases](https://img.shields.io/github/downloads/hujiaweibujidao/Gank-for-Mac/total.svg)](https://github.com/hujiaweibujidao/Gank-for-Mac/releases)  
 
 # Gank for Mac
 
