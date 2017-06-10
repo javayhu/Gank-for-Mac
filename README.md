@@ -8,7 +8,7 @@ Gank for Mac是一个小巧的干货集中营Mac端应用，它只在你的状�
 
 [应用下载地址](https://github.com/hujiaweibujidao/Gank/releases)
 
-如果你对我的开发工作感兴趣的话记得在Github上Follow我哟，或者关注[我的博客](http://hujiaweibujidao.github.io/)。
+如果你对我的开发工作感兴趣的话记得在Github上Follow我哟，或者关注[我的博客](http://javayhu.me/)。
 
 ## 应用功能
 
@@ -16,13 +16,17 @@ Gank for Mac的功能包括查看[干货集中营](https://gank.io)今天或者�
 
 应用在加载数据的时候会显示菊花，加载失败的时候会显示出错并提供重载按钮。
 
-Gank for Mac使用的是 [Swift](https://swift.org/) 语言开发的，Mac系统版本要求10.10及以上，应用截图如下：
+Gank for Mac使用的是 [Swift](https://swift.org/) 3 开发的，Mac系统版本要求10.10及以上，应用截图如下：
 
 ![img](screenshot2.png)
 
-由于我是刚学Swift，而且还是第一次写Mac OS X应用，所以项目源码基本上都注释得很清楚，但是不保证代码写得非常好，所以哪块代码要是没写好请轻拍哈。当然，欢迎提交PR或者提建议，比如加上提交干货的功能。😘
+由于是第一次写Mac OS X应用，所以项目源码基本上都注释得很清楚，但是不保证代码写得非常好，所以哪块代码要是没写好请轻拍哈。当然，欢迎提交PR或者提建议，比如加上提交干货的功能。😘
 
 ![img](screenshot3.png)
+ 
+2017/6/10 周末过来公司抽空将Swift升级到3.0版本
+ 
+![img](screenshot4.png)
 
 ## 数据+依赖+资源
 
@@ -41,8 +45,7 @@ Gank for Mac使用的是 [Swift](https://swift.org/) 语言开发的，Mac系统
 
 #### 1.妹子图在哪里呢？
 
-我就知道你只关心妹子！！！🙈🙈🙈   
-为了应用的简洁(实际是我写不出来😂)，点击妹子图或者休息视频会进入那天的干货日报界面。
+我就知道你只关心妹子！！！🙈 为了应用的简洁，点击妹子图或者休息视频会进入那天的干货日报界面。
 
 #### 2.后台自动刷新的时间间隔设置的是多久？
 
@@ -52,7 +55,7 @@ Gank for Mac使用的是 [Swift](https://swift.org/) 语言开发的，Mac系统
 
 应用的开机自启动可以在`System Preferences`中设置的嘛，别以为我不知道！😌
 
-![img](autologin.png)
+<!--![img](autologin.png)-->
 
 ## The License
 

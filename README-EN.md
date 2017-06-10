@@ -7,7 +7,7 @@
 ## Application Features
 
 This tiny application is used to view the `gank` posts in [gank.io](https://gank.io), and send you a notification when new post arrived. Nothing more and nothing less.   
-It is developed with [Swift](https://swift.org/) 2.2!!! Excited? 😜   
+It is developed with [Swift](https://swift.org/) 3!!! Excited? 😜   
 Btw, please make sure your mac system is OS X 10.10 or later.
 
 ![img](screenshot2.png)
