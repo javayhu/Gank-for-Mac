@@ -11,11 +11,11 @@ import Cocoa
 //监听用户的点击事件，当用户在弹出窗口外点击时要关闭窗口
 class EventMonitor {
 
-	private var monitor: AnyObject?
-	private let mask: NSEventMask
-	private let handler: NSEvent? -> () // 回调函数
+	fileprivate var monitor: AnyObject?
+	fileprivate let mask: NSEventMask
+	fileprivate let handler: (NSEvent?) -> () // 回调函数
 
-	init(mask: NSEventMask, handler: NSEvent? -> ()) {
+	init(mask: NSEventMask, handler: @escaping (NSEvent?) -> ()) {
 		self.mask = mask
 		self.handler = handler
 	}
@@ -25,7 +25,7 @@ class EventMonitor {
 	}
 
 	func start() {
-		monitor = NSEvent.addGlobalMonitorForEventsMatchingMask(mask, handler: handler)
+		monitor = NSEvent.addGlobalMonitorForEvents(matching: mask, handler: handler) as AnyObject
 	}
 
 	func stop() {

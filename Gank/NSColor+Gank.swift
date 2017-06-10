@@ -12,7 +12,7 @@ import Cocoa
 extension NSColor {
 
 	class func gankWhiteColor() -> NSColor {
-		return NSColor.whiteColor()
+		return NSColor.white
 	}
 
 	class func gankHighlightColor() -> NSColor {

@@ -27,10 +27,10 @@ class GankItem {
 	}
 
 	// 将返回的json串中的一个item转换成GankItem，时间 2016-05-13T11:08:37.42Z -> 2016-05-13
-	class func parse(item: JSON) -> GankItem {
+	class func parse(_ item: JSON) -> GankItem {
 		let time = item["publishedAt"].stringValue
 		return GankItem(type: item["type"].stringValue, url: item["url"].stringValue,
-			desc: item["desc"].stringValue, who: item["who"].stringValue, date: time.substringToIndex(time.startIndex.advancedBy(10)))
+			desc: item["desc"].stringValue, who: item["who"].stringValue, date: time.substring(to: time.index(time.startIndex, offsetBy: 10)))
 	}
 
 }
@@ -65,7 +65,7 @@ extension GankItem {
 
 	// 构造成每日数据所需的结构，将“-”替换成“/”即可
 	func urlSuffix() -> String {
-		return date.stringByReplacingOccurrencesOfString("-", withString: "/")
+		return date.replacingOccurrences(of: "-", with: "/")
 	}
 }
 

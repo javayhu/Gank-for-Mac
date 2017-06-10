@@ -10,12 +10,5 @@ import Cocoa
 import Foundation
 
 protocol NSUserNotificationImage {
-	func set_identityImage(image: NSImage)
-
-	
-
+	func set_identityImage(_ image: NSImage)
 }
-
-//extension NSUserNotification: NSUserNotificationImage {
-//
-//}

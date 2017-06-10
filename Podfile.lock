@@ -1,27 +1,18 @@
 PODS:
-  - Alamofire (3.2.1)
-  - SwiftyJSON (2.3.2)
-  - SwiftyTimer (1.4.0)
+  - Alamofire (4.4.0)
+  - SwiftyJSON (3.1.4)
+  - SwiftyTimer (2.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.2.1)
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
-  - SwiftyTimer
-
-EXTERNAL SOURCES:
-  SwiftyJSON:
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
-
-CHECKOUT OPTIONS:
-  SwiftyJSON:
-    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+  - Alamofire (~> 4.4)
+  - SwiftyJSON (~> 3.1.4)
+  - SwiftyTimer (~> 2.0.0)
 
 SPEC CHECKSUMS:
-  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
-  SwiftyTimer: db4458cfaf67fc71e16ad6e4637c60b86f76a649
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: a1928387b998341de4d3a2402ca1d8d734278feb
+PODFILE CHECKSUM: e38cdd4f32edf8182730ad90be9ce7ea2c6a3291
 
-COCOAPODS: 1.0.0.rc.2
+COCOAPODS: 1.2.1

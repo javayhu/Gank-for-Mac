@@ -16,19 +16,19 @@ class GankItemCell: NSTableCellView {
 	@IBOutlet weak var descLabel: NSTextField! // 干货描述
 	@IBOutlet weak var seenView: GankSeenView! // 是否已经看过，暂时没用
 
-	private var item: GankItem? // 干货
+	fileprivate var item: GankItem? // 干货
 
-	private let cursor = NSCursor.pointingHandCursor()
-	private var trackingArea: NSTrackingArea?
-	private var mouseInside = false {
+	fileprivate let cursor = NSCursor.pointingHand()
+	fileprivate var trackingArea: NSTrackingArea?
+	fileprivate var mouseInside = false {
 		didSet {
 			updateUI()
 		}
 	}
 
 	// 创建一个table cell view
-	class func view(tableView: NSTableView, owner: AnyObject?, subject: AnyObject?) -> NSView {
-		let view = tableView.makeViewWithIdentifier("postCellIdentifier", owner: owner) as! GankItemCell
+	class func view(_ tableView: NSTableView, owner: AnyObject?, subject: AnyObject?) -> NSView {
+		let view = tableView.make(withIdentifier: "postCellIdentifier", owner: owner) as! GankItemCell
 
 		if let item = subject as? GankItem {
 			view.setItem(item)
@@ -42,7 +42,7 @@ class GankItemCell: NSTableCellView {
 		commonInit()
 	}
 
-	private func commonInit() {
+	fileprivate func commonInit() {
 		wantsLayer = true
 
 		typeImageView.wantsLayer = true
@@ -61,7 +61,7 @@ class GankItemCell: NSTableCellView {
 		cursor.set()
 	}
 
-	private func setItem(item: GankItem?) {
+	fileprivate func setItem(_ item: GankItem?) {
 		guard let item = item else {
 			return
 		}
@@ -71,23 +71,23 @@ class GankItemCell: NSTableCellView {
 		updateUI()
 	}
 
-	private func updateUI() {
+	fileprivate func updateUI() {
 		guard let item = item else {
 			return
 		}
 
-		layer?.backgroundColor = mouseInside ? NSColor.gankHighlightColor().CGColor : NSColor.gankWhiteColor().CGColor
+		layer?.backgroundColor = mouseInside ? NSColor.gankHighlightColor().cgColor : NSColor.gankWhiteColor().cgColor
 
-		seenView.hidden = true
+		seenView.isHidden = true
 
 		whoLabel.stringValue = item.textWho
 		descLabel.stringValue = item.textDesc
 		typeImageView.image = NSImage(named: item.imageType)
 	}
 
-	private func createTrackingAreaIfNeeded() {
+	fileprivate func createTrackingAreaIfNeeded() {
 		if trackingArea == nil {
-			trackingArea = NSTrackingArea(rect: CGRect.zero, options: [NSTrackingAreaOptions.InVisibleRect, NSTrackingAreaOptions.MouseEnteredAndExited, NSTrackingAreaOptions.ActiveAlways], owner: self, userInfo: nil)
+			trackingArea = NSTrackingArea(rect: CGRect.zero, options: [NSTrackingAreaOptions.inVisibleRect, NSTrackingAreaOptions.mouseEnteredAndExited, NSTrackingAreaOptions.activeAlways], owner: self, userInfo: nil)
 		}
 	}
 
@@ -101,11 +101,11 @@ class GankItemCell: NSTableCellView {
 		}
 	}
 
-	override func mouseEntered(theEvent: NSEvent) {
+	override func mouseEntered(with theEvent: NSEvent) {
 		mouseInside = true
 	}
 
-	override func mouseExited(theEvent: NSEvent) {
+	override func mouseExited(with theEvent: NSEvent) {
 		mouseInside = false
 	}
 }

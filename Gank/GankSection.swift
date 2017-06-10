@@ -29,7 +29,7 @@ extension GankSection {
 	// 构造成每日数据所需的结构，将“-”替换成“/”即可
 	func urlSuffix() -> String? {
 		if let date = self.date {
-			return date.stringByReplacingOccurrencesOfString("-", withString: "/")
+			return date.replacingOccurrences(of: "-", with: "/")
 		}
 		return nil
 	}

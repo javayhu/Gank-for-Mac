@@ -14,19 +14,19 @@ import Cocoa
 class PopoverAction {
 
 	// 静态计算型属性，监听用户的点击事件，在窗口外点击要关闭窗口
-	private class var eventMonitor: EventMonitor? {
-		return EventMonitor(mask: [.LeftMouseDownMask, .RightMouseDownMask]) { event in
+	fileprivate class var eventMonitor: EventMonitor? {
+		return EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { event in
 			close()
 		}
 	}
 
 	// AppDelegate
-	private class var appDelegate: AppDelegate {
-		return NSApplication.sharedApplication().delegate as! AppDelegate
+	fileprivate class var appDelegate: AppDelegate {
+		return NSApplication.shared().delegate as! AppDelegate
 	}
 
 	class func toggle() {
-		if appDelegate.popover.shown {
+		if appDelegate.popover.isShown {
 			close()
 		} else {
 			show()
@@ -34,7 +34,7 @@ class PopoverAction {
 	}
 
 	class func close() {
-		if !appDelegate.popover.shown {
+		if !appDelegate.popover.isShown {
 			return
 		}
 
@@ -43,13 +43,13 @@ class PopoverAction {
 	}
 
 	class func show() {
-		NSRunningApplication.currentApplication().activateWithOptions(NSApplicationActivationOptions.ActivateIgnoringOtherApps)
+		NSRunningApplication.current().activate(options: NSApplicationActivationOptions.activateIgnoringOtherApps)
 
 		guard let button = appDelegate.statusItem.button else {
 			return
 		}
 
-		appDelegate.popover.showRelativeToRect(button.frame, ofView: button, preferredEdge: .MinY)
+		appDelegate.popover.show(relativeTo: button.frame, of: button, preferredEdge: .minY)
 		eventMonitor?.start()
 	}
 }

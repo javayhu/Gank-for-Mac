@@ -10,7 +10,7 @@ import Cocoa
 
 //加载界面的状态，分别是 正在加载，出现错误，内容为空，空闲状态
 enum LoadingState {
-	case Loading, Error, Empty, Idle
+	case loading, error, empty, idle
 }
 
 //加载界面
@@ -26,47 +26,47 @@ class GankLoadingView: NSView {
 		super.awakeFromNib()
 
 		wantsLayer = true
-		layer?.backgroundColor = NSColor.gankWhiteColor().CGColor
+		layer?.backgroundColor = NSColor.gankWhiteColor().cgColor
 	}
 
 	// 显示某个状态
-	func showState(state: LoadingState) {
+	func showState(_ state: LoadingState) {
 		switch state {
-		case .Loading:
-			hidden = false
-			reload.hidden = true
-			loadingIndicator.hidden = false
+		case .loading:
+			isHidden = false
+			reload.isHidden = true
+			loadingIndicator.isHidden = false
 			loadingIndicator.startAnimation(nil)
 			loadingLabel.stringValue = "客官，请稍等..."
-			currentState = .Loading
+			currentState = .loading
 
-		case .Error:
-			hidden = false
-			reload.hidden = false
-			loadingIndicator.hidden = true
+		case .error:
+			isHidden = false
+			reload.isHidden = false
+			loadingIndicator.isHidden = true
 			loadingIndicator.stopAnimation(nil)
 			loadingLabel.stringValue = "客官，出错啦!!!"
-			currentState = .Error
+			currentState = .error
 
-		case .Empty:
-			hidden = false
-			reload.hidden = false
-			loadingIndicator.hidden = true
+		case .empty:
+			isHidden = false
+			reload.isHidden = false
+			loadingIndicator.isHidden = true
 			loadingIndicator.stopAnimation(nil)
 			loadingLabel.stringValue = "客官，没货啦..."
-			currentState = .Empty
+			currentState = .empty
 
-		case .Idle:
-			hidden = true
+		case .idle:
+			isHidden = true
 			loadingIndicator.stopAnimation(nil)
-			currentState = .Idle
+			currentState = .idle
 		}
 	}
 
-	@IBAction func toggleReloadButton(sender: NSView) {
-		showState(.Loading)
+	@IBAction func toggleReloadButton(_ sender: NSView) {
+		showState(.loading)
 
 		// 发送加载数据的请求
-		NSNotificationCenter.defaultCenter().postNotificationName("Reload", object: nil)
+		NotificationCenter.default.post(name: Notification.Name(rawValue: "Reload"), object: nil)
 	}
 }

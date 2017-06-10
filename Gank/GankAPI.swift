@@ -19,18 +19,18 @@ class GankAPI {
 	let API_DATES = "https://gank.io/api/day/history" // 获取所有发过日报的日期列表
 
 	// 加载指定日期的数据
-	func loadDateGanks(section: GankSection, callback: CallBack) {
+	func loadDateGanks(_ section: GankSection, callback: @escaping CallBack) {
 		print("Load Date Ganks")
 		let url = API_TODAY + section.urlSuffix()!
 
-		Alamofire.request(.GET, url).responseJSON { response in
+        Alamofire.request(url, method: .get).responseJSON { response in
 			// response.result是一个枚举，如果是Success的话有个关联值Value，如果是Failure的话有个关联值Error
 			switch response.result {
-			case .Failure(let error):
+			case .failure(let error):
 				print("Load Date Ganks Failed")
 				// print(error)
-				callback(error) // 如果失败的话将错误error传给回调函数
-			case .Success:
+				callback(error as AnyObject) // 如果失败的话将错误error传给回调函数
+			case .success:
 				print("Load Date Ganks Success")
 
 				var itemList = [GankItem]()
@@ -42,22 +42,22 @@ class GankAPI {
 						}
 					}
 				}
-				callback(itemList) // 如果成功的话将数据列表传给回调函数
+				callback(itemList as AnyObject) // 如果成功的话将数据列表传给回调函数
 			}
 		} // responseJSON最后一个参数是闭包 completionHandler: Response<AnyObject, NSError> -> Void
 	}
 
 	// 加载所有发过日报的日期列表
-	func loadAllDates(callback: CallBack) {
+	func loadAllDates(_ callback: @escaping CallBack) {
 		print("Load All Dates")
 
-		Alamofire.request(.GET, API_DATES).responseJSON { response in
+        Alamofire.request(API_DATES, method: .get).responseJSON { response in
 			switch response.result {
-			case .Failure(let error):
+			case .failure(let error):
 				print("Load All Dates Failed")
 				// print(error)
-				callback(error)
-			case .Success:
+				callback(error as AnyObject)
+			case .success:
 				print("Load All Dates Success")
 
 				var sections = [GankSection]()
@@ -67,7 +67,7 @@ class GankAPI {
 						sections.append(GankSection(date: date.stringValue))
 					}
 				}
-				callback(sections)
+				callback(sections as AnyObject)
 			}
 		}
 	}
