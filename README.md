@@ -6,7 +6,7 @@
 
 Gank for Mac是一个小巧的干货集中营Mac端应用，它只在你的状态栏占据一点点空间而已。
 
-[应用下载地址](https://github.com/hujiaweibujidao/Gank/releases)
+[应用下载地址](https://github.com/hujiaweibujidao/Gank-for-Mac/releases)
 
 如果你对我的开发工作感兴趣的话记得在Github上Follow我哟，或者关注[我的博客](http://javayhu.me/)。
 
